@@ -1,0 +1,30 @@
+@mixin size($alto, $ancho) {
+    height: $alto;
+    width: $ancho;
+}
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1023px) {
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    img {
+        @include size(40vh, 50%);
+    }
+    iframe {
+        @include size(30vh, 70%);
+    }
+}
+/* Smartphone*/
+@media (max-width: 480px){
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    img {
+        @include size(20vh, 60%);
+    }
+    iframe {
+        @include size(30vh, 70%);
+    }
+}
